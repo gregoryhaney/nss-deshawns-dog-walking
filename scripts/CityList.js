@@ -9,7 +9,7 @@ export const CityList = () => {
     for (const walker of walkers) {
         citiesHTML += `
                     <li>
-                    ${currentWalker.city}
+                    ${walker.city}
                     </li>`
     }
 

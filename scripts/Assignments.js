@@ -23,11 +23,12 @@ export const Assignments = () => {
     assignmentHTML = "<ul>"
 
     for (const currentPet of pets) {
-        const currentPetWalker = findPetWalker(currentPet, walkers)
+        const currentPetWalker = findWalker(currentPet, walkers)
         assignmentHTML += `
             <li>
                 ${currentPet.name} is being walked by
-                ${currentPetWalker.name} in ${currentPetWalker.city}
+                ${currentPetWalker.name} in 
+                ${currentPetWalker.city}
             </li>
         `
     }

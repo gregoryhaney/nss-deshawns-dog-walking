@@ -1,4 +1,4 @@
-import { getWalker } from "./database.js"
+import { getWalkers } from "./database.js"
 
 const walkers = getWalkers()
 
@@ -9,11 +9,12 @@ export const Walkers = () => {
     for (const walker of walkers) {
         walkerHTML += `
                     <li>
-                    ${walker.fullName}
+                    ${walker.name}
                     </li>`
     }
 
     walkerHTML += "</ul>"
 
+    return walkerHTML
 }
 
