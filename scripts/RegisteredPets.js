@@ -6,7 +6,10 @@ export const RegisteredPets = () => {
     let petHTML = "<ul>"
 
     for (const pet of pets) {
-        petHTML += `<li>${pet.name}</li>`
+        petHTML += `
+                <li>
+                ${pet.name}
+                </li>`
     }
 
     petHTML += "</ul>"
