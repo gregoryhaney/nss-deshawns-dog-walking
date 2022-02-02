@@ -1,6 +1,6 @@
 /*
     This module contains all of the data, or state, for the
-    application. It exports two functions that allow other
+    application. It exports four functions that allow other
     modules to get copies of the state.
 */
 const database = {
@@ -59,25 +59,25 @@ const database = {
 }
 
 // fn to make a copy of 'walkers'
-// it has properties for: id, name, email
+// it has properties of: id, name, email
 export const getWalkers = () => {
     return database.walkers.map(walker => ({...walker}))
 }
 
 // fn to make a copy of 'pets'
-// it has properties for: id, name, walkerId
+// it has properties of: id, name, walkerId
 export const getPets = () => {
     return database.pets.map(pet => ({...pet}))
 }
 
 // fn to make a copy of 'cities'
-// it has properties for: id, name
+// it has properties of: id, name
 export const getCities = () => {
     return database.cities.map(city => ({...city}))
 }
 
 // fn to make a copy of 'walkerCities'
-// it has properties for: id, walkerId, cityId
+// it has properties of: id, walkerId, cityId
 export const getWalkerCities = () => {
     return database.walkerCities.map(assignment => ({...assignment}))
 }

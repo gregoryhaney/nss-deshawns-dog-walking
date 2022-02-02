@@ -6,7 +6,8 @@ const cities = getCities()
 
 export const CityList = () => {
     let citiesHTML = "<ul>"
-
+        // iterate through cities and
+        // add each to the citiesHTML variable
     for (const city of cities) {
         citiesHTML += `
                     <li>

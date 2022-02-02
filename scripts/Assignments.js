@@ -18,17 +18,26 @@ export const Assignments = () => {
 }
 
 
-const findWalkerAssignedToPet = (pets, walkers, walkerCities, cities) => {
-    let walkerAssignedToPetArray = []   
+ const findWalkerAssignedToPet = (pets, walkers, walkerCities, cities) => {
+    
     let assignmentHTML = ""
     assignmentHTML = "<ul>"     
-                    
+                    // iterate through each pet
             for (const pet of pets) {
+
+                        // iterate through each walker
                 for (const walker of walkers) {
+                            // check if id of walker matches pet's walker id
                     if (walker.id === pet.walkerId) {
+                                // true? => iterate walker cities
                         for (const walkerCity of walkerCities) {  
+                                // check if id of walker matches walker city's walker id
                             if (walker.id === walkerCity.walkerId) {
-                                for (const city of cities) {               
+                                    // true? => iterate cities
+                                for (const city of cities) {    
+                                        // check if city id matches walker city's city id
+                                        // true? => append to assignmentHTML with
+                                        // pet's name is being walked by walker's name in city           
                                     if (city.id === walkerCity.cityId) {
                                     assignmentHTML += `
                                                     <li>
